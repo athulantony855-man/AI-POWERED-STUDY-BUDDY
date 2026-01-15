@@ -4,7 +4,7 @@ import datetime
 st.set_page_config(page_title="AI Study Assistant", layout="wide")
 st.title("AI Powered Study Assistant")
 st.caption("Simplistic Learning Companion")
-HF_TOKEN="enter the HF Token here"
+HF_TOKEN="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"
 client=InferenceClient(model="meta-llama/Meta-Llama-3-8B-Instruct",token=HF_TOKEN)
 def ask_ai(prompt):
     response=client.chat_completion(messages=[{"role":"user","content":prompt}],max_tokens=400,temperature=0.7)
