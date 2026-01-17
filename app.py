@@ -37,7 +37,7 @@ elif feature=="Simplify Notes":
         else:
             st.warning("Please paste your notes to simplify.")
 elif feature=="Quiz Generator":
-    variable_3=st.text_area("Enter the topic for quiz generation",height=200)
+    variable_3=st.text_input("Enter the topic for quiz generation")
     if st.button("Generate Quiz"):
         if variable_3:
             prompt=f"Generate a 5-question quiz on the topic '{variable_3}' with multiple choice answers and provide the correct answer for each question.Include some conceptual,application-based and short-answer questions."
@@ -48,7 +48,7 @@ elif feature=="Quiz Generator":
         else:
             st.warning("Please enter a topic for quiz generation.")
 elif feature=="Concept Dependency Map":
-    variable_4=st.text_area("Enter the concept to create a dependency map for", height=200)
+    variable_4=st.text_input("Enter the concept to create a dependency map for")
     if st.button("Create Concept Dependency Map"):
         if variable_4:
             prompt=f"Create a concept dependency map for the concept '{variable_4}'.List the prerequisite concepts and their relationships in a hierarchical format."
