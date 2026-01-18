@@ -2,8 +2,9 @@ import streamlit as st
 from huggingface_hub import InferenceClient
 import datetime
 st.set_page_config(page_title="AI Study Assistant", layout="wide")
-st.title("AI Powered Study Assistant")
+st.title("AI Powered Study Buddy")
 st.caption("Simplistic Learning Companion")
+# HF_TOKEN is added directly to the secrets file in streamlit cloud
 HF_TOKEN=st.secrets["HF_TOKEN"]
 client=InferenceClient(model="meta-llama/Meta-Llama-3-8B-Instruct",token=HF_TOKEN)
 def ask_ai(prompt):
